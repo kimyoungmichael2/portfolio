@@ -4,7 +4,6 @@
   "description": "",
   "main": "index.html",
   "dependencies": {
-    "bootstrap": "^5.0.0-beta1"
   },
   "devDependencies": {},
   "scripts": {
