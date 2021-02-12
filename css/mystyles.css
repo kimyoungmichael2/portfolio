@@ -7759,9 +7759,13 @@ a.has-text-danger-dark:hover, a.has-text-danger-dark:focus {
   padding: 3rem 1.5rem 6rem; }
 
 .mainBody {
-  width: 90vw;
   height: 90vh;
   display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column; }
+
+.profileImageAndLinks {
   justify-content: center;
   align-items: center;
   flex-direction: column; }
@@ -7773,7 +7777,20 @@ a.has-text-danger-dark:hover, a.has-text-danger-dark:focus {
 
 .profileDescription {
   display: flex;
-  align-items: center; }
+  justify-content: center;
+  align-items: center;
+  max-width: 550px; }
 
 .icons {
-  font-size: 24px; }
+  font-size: 24px;
+  display: flex;
+  justify-content: center; }
+
+.skills {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column; }
+
+ul {
+  list-style-type: square; }

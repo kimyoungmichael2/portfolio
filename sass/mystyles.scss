@@ -2,9 +2,15 @@
 @import "../node_modules/bulma/bulma.sass";
 
 .mainBody {
-    width: 90vw;
+    // width: 90vw;
     height: 90vh;
     display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.profileImageAndLinks {
     justify-content: center;
     align-items: center;
     flex-direction: column;
@@ -18,9 +24,28 @@
 
 .profileDescription {
     display: flex;
+    justify-content: center;
     align-items: center;
+    max-width: 550px;
 }
 
 .icons {
     font-size: 24px;
+    display: flex;
+    justify-content: center;
+}
+
+.writings {
+    // text-align: center;
+}
+
+.skills {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+ul {
+    list-style-type: square;
 }
