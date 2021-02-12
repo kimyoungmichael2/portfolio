@@ -1,15 +1,25 @@
 {
   "name": "portfolio",
   "version": "1.0.0",
-  "description": "",
-  "main": "index.html",
-  "dependencies": {
-  },
-  "devDependencies": {},
+  "description": "This website is going to serve as a hub for displaying Michael's personal software projects.",
+  "main": "sass/mystyles.scss",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "scss": "sass --watch styles.scss ./styles/styles.css"
+    "css-build": "node-sass --omit-source-map-url sass/mystyles.scss css/mystyles.css",
+    "css-watch": "npm run css-build -- --watch",
+    "start": "npm run css-watch"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kimyoungmichael2/portfolio.git"
   },
   "author": "",
-  "license": "ISC"
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/kimyoungmichael2/portfolio/issues"
+  },
+  "homepage": "https://github.com/kimyoungmichael2/portfolio#readme",
+  "devDependencies": {
+    "bulma": "^0.9.2",
+    "node-sass": "^5.0.0"
+  }
 }

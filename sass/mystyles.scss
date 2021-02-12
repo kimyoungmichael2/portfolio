@@ -1,0 +1,26 @@
+@charset "utf-8";
+@import "../node_modules/bulma/bulma.sass";
+
+.mainBody {
+    width: 90vw;
+    height: 90vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.profileImage {
+    display: flex;
+    align-items: center;
+    flex-direction: row-reverse;
+}
+
+.profileDescription {
+    display: flex;
+    align-items: center;
+}
+
+.icons {
+    font-size: 24px;
+}
