@@ -79,40 +79,24 @@
                   </footer>
                 </div>
 
-
-                <!-- <div class="columns">
-                  <div class="column skills">
-                    <a class="level-item has-text-centered">
-                      <ion-icon class="icons" name="browsers-outline"></ion-icon>
-                    </a>
-                    <b>Front End</b>
-                    <ul>
-                      <li>Coffee</li>
-                      <li>Tea</li>
-                      <li>Milk</li>
-                    </ul>
-                  </div>
-                  <div class="column skills">
-                    hello
-                  </div>
-                  <div class="column skills">
-                    hello
-                  </div>
-                </div> -->
-
               </div>
             </div>
         </div>
       </div>
-      <div class ="columns profile">
-        <div class="column">
-          First column
-        </div>
-        <div class="column">
-          Second column
+      <div class="embla" id="embla">
+        <div class="embla__container">
+          <div class="embla__slide">Slide 1</div>
+          <div class="embla__slide">Slide 2</div>
+          <div class="embla__slide">Slide 3</div>
         </div>
       </div>
     </div>
     <script src="https://unpkg.com/ionicons@5.4.0/dist/ionicons.js"></script>
+    <script src="https://unpkg.com/embla-carousel@latest/embla-carousel.umd.js">
+    </script>
+    <script>
+      var emblaNode = document.getElementById("embla");
+      var embla = EmblaCarousel(emblaNode);
+    </script>
   </body>
 </html>

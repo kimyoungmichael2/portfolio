@@ -26,13 +26,21 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    max-width: 550px;
+    max-width: 570px;
 }
 
 .icons {
     font-size: 24px;
     display: flex;
     justify-content: center;
+    color: #363636;
+}
+
+.icons:hover {
+    font-size: 24px;
+    display: flex;
+    justify-content: center;
+    color: grey;
 }
 
 .writings {
@@ -49,3 +57,17 @@
 ul {
     list-style-type: square;
 }
+
+
+
+.embla {
+    overflow: hidden;
+  }
+.embla__container {
+    display: flex;
+  }
+.embla__slide {
+    position: relative;
+    min-width: 100%;
+    background-color: brown;
+  }
