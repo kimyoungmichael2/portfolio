@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Michael Young Kim</title>
     <link rel="stylesheet" href="css/mystyles.css">
+    <link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css">
   </head>
   <body>
     <div class="mainBody">
@@ -79,24 +80,92 @@
                   </footer>
                 </div>
 
+
+                <!-- <div class="columns">
+                  <div class="column skills">
+                    <a class="level-item has-text-centered">
+                      <ion-icon class="icons" name="browsers-outline"></ion-icon>
+                    </a>
+                    <b>Front End</b>
+                    <ul>
+                      <li>Coffee</li>
+                      <li>Tea</li>
+                      <li>Milk</li>
+                    </ul>
+                  </div>
+                  <div class="column skills">
+                    hello
+                  </div>
+                  <div class="column skills">
+                    hello
+                  </div>
+                </div> -->
+
               </div>
             </div>
         </div>
       </div>
-      <div class="embla" id="embla">
-        <div class="embla__container">
-          <div class="embla__slide">Slide 1</div>
-          <div class="embla__slide">Slide 2</div>
-          <div class="embla__slide">Slide 3</div>
+      <div class="caraouselDiv">
+        <div class="tabs">
+          <button class="tablink" onclick="openPage('Home', this, 'red')">Home</button>
+          <button class="tablink" onclick="openPage('News', this, 'green')" id="defaultOpen">News</button>
+          <button class="tablink" onclick="openPage('Contact', this, 'blue')">Contact</button>
+          <button class="tablink" onclick="openPage('About', this, 'orange')">About</button>
+        </div>
+
+        <div id="Home" class="tabcontent">
+          <h3>Home</h3>
+          <p>Home is where the heart is..</p>
+        </div>
+        
+        <div id="News" class="tabcontent">
+          <h3>News</h3>
+          <p>Some news this fine day!</p>
+        </div>
+        
+        <div id="Contact" class="tabcontent">
+          <h3>Contact</h3>
+          <p>Get in touch, or swing by for a cup of coffee.</p>
+        </div>
+        
+        <div id="About" class="tabcontent">
+          <h3>About</h3>
+          <p>Who we are and what we do.</p>
         </div>
       </div>
     </div>
+
+
+
     <script src="https://unpkg.com/ionicons@5.4.0/dist/ionicons.js"></script>
-    <script src="https://unpkg.com/embla-carousel@latest/embla-carousel.umd.js">
-    </script>
+    <script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
     <script>
-      var emblaNode = document.getElementById("embla");
-      var embla = EmblaCarousel(emblaNode);
+      function openPage(pageName, elmnt, color) {
+        // Hide all elements with class="tabcontent" by default */
+        var i, tabcontent, tablinks;
+        tabcontent = document.getElementsByClassName("tabcontent");
+        for (i = 0; i < tabcontent.length; i++) {
+          tabcontent[i].style.display = "none";
+        }
+
+        // Remove the background color of all tablinks/buttons
+        tablinks = document.getElementsByClassName("tablink");
+        for (i = 0; i < tablinks.length; i++) {
+          tablinks[i].style.backgroundColor = "";
+        }
+
+        // Show the specific tab content
+        document.getElementById(pageName).style.display = "block";
+
+        // Add the specific color to the button used to open the tab content
+        elmnt.style.backgroundColor = color;
+      }
+
+      // Get the element with id="defaultOpen" and click on it
+      document.getElementById("defaultOpen").click();
     </script>
+
+
+
   </body>
 </html>
