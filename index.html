@@ -9,132 +9,111 @@
     <link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css">
   </head>
   <body>
-    <div class="mainBody">
-      <div class ="columns profile">
-        <div class="column profileImage">
-          <div class="profileImageAndLinks">
-            <img src="./public/profile220x220.jpeg">
-            <br><br>
-            <nav class="level is-mobile icons">
-              <div class="level">
-                <a class="level-item has-text-centered">
-                  <ion-icon class="icons" name="logo-github"></ion-icon>
-                </a>
-                <a class="level-item">
-                  <ion-icon class="icons" name="logo-github"></ion-icon>
-                </a>
-                <a class="level-item">
-                  <ion-icon class="icons" name="logo-github"></ion-icon>
-                </a>
-                <a class="level-item">
-                  <ion-icon class="icons" name="logo-github"></ion-icon>
-                </a>
+      <div class="sectionOne">
+        <div class ="columns profile">
+          <div class="column profileImage">
+            <div class="profileImageAndLinks">
+              <img src="./public/profile220x220.jpeg">
+              <br><br>
+              <nav class="level is-mobile icons">
+                <div class="level">
+                  <a class="level-item has-text-centered">
+                    <ion-icon class="icons" name="logo-github"></ion-icon>
+                  </a>
+                  <a class="level-item">
+                    <ion-icon class="icons" name="logo-github"></ion-icon>
+                  </a>
+                  <a class="level-item">
+                    <ion-icon class="icons" name="logo-github"></ion-icon>
+                  </a>
+                  <a class="level-item">
+                    <ion-icon class="icons" name="logo-github"></ion-icon>
+                  </a>
+                </div>
+              </nav>
+            </div>
+          </div>
+          <div class="column profileDescription ">
+              <div class="media">
+                <div class="media-content">
+                  <div class="content">
+                    <h1 class="title is-3 writings">Michael Kim</h1>
+                    <h2 class="subtitle is-5 writings">Front End Developer</h2>
+                    <p class="writings">Michael makes fast, responsive, and dynamic web interfaces. He currently lives in DC Metro area and is #readytowork! <br>Check out some of his skills and projects here.</p>
+                  </div>
+
+                  <div class="card">
+                    <footer class="card-footer">
+                      <div class="card-footer-item skills">
+                        <a class>
+                          <ion-icon class="icons" name="browsers-outline"></ion-icon>
+                        </a>
+                        <b>Front End</b>
+                        <ul>
+                          <li>Coffee</li>
+                          <li>Tea</li>
+                          <li>Milk</li>
+                        </ul>
+                      </div>
+                      <div class="card-footer-item skills">
+                        <a class>
+                          <ion-icon class="icons" name="browsers-outline"></ion-icon>
+                        </a>
+                        <b>Front End</b>
+                        <ul>
+                          <li>Coffee</li>
+                          <li>Tea</li>
+                          <li>Milk</li>
+                        </ul>
+                      </div>
+                      <div class="card-footer-item skills">
+                        <a class>
+                          <ion-icon class="icons" name="browsers-outline"></ion-icon>
+                        </a>
+                        <b>Front End</b>
+                        <ul>
+                          <li>Coffee</li>
+                          <li>Tea</li>
+                          <li>Milk</li>
+                        </ul>
+                      </div>
+                    </footer>
+                  </div>
+                </div>
               </div>
-            </nav>
           </div>
         </div>
-        <div class="column profileDescription ">
-            <div class="media">
-              <div class="media-content">
-                <div class="content">
-                  <h1 class="title is-3 writings">Michael Kim</h1>
-                  <h2 class="subtitle is-5 writings">Front End Developer</h2>
-                  <p class="writings">Michael makes fast, responsive, and dynamic web interfaces. He currently lives in DC Metro area and is #readytowork! <br>Check out some of his skills and projects here.</p>
-                </div>
+      </div>
+      <div class="sectionTwo container">
+        <div class="caraouselDiv">
+          <div class="tabs">
+            <button class="tablink" onclick="openPage('Home', this, 'red')">Home</button>
+            <button class="tablink" onclick="openPage('News', this, 'green')" id="defaultOpen">News</button>
+            <button class="tablink" onclick="openPage('Contact', this, 'blue')">Contact</button>
+            <button class="tablink" onclick="openPage('About', this, 'orange')">About</button>
+          </div>
 
-                <div class="card">
-                  <footer class="card-footer">
-                    <div class="card-footer-item skills">
-                      <a class>
-                        <ion-icon class="icons" name="browsers-outline"></ion-icon>
-                      </a>
-                      <b>Front End</b>
-                      <ul>
-                        <li>Coffee</li>
-                        <li>Tea</li>
-                        <li>Milk</li>
-                      </ul>
-                    </div>
-                    <div class="card-footer-item skills">
-                      <a class>
-                        <ion-icon class="icons" name="browsers-outline"></ion-icon>
-                      </a>
-                      <b>Front End</b>
-                      <ul>
-                        <li>Coffee</li>
-                        <li>Tea</li>
-                        <li>Milk</li>
-                      </ul>
-                    </div>
-                    <div class="card-footer-item skills">
-                      <a class>
-                        <ion-icon class="icons" name="browsers-outline"></ion-icon>
-                      </a>
-                      <b>Front End</b>
-                      <ul>
-                        <li>Coffee</li>
-                        <li>Tea</li>
-                        <li>Milk</li>
-                      </ul>
-                    </div>
-                  </footer>
-                </div>
-
-
-                <!-- <div class="columns">
-                  <div class="column skills">
-                    <a class="level-item has-text-centered">
-                      <ion-icon class="icons" name="browsers-outline"></ion-icon>
-                    </a>
-                    <b>Front End</b>
-                    <ul>
-                      <li>Coffee</li>
-                      <li>Tea</li>
-                      <li>Milk</li>
-                    </ul>
-                  </div>
-                  <div class="column skills">
-                    hello
-                  </div>
-                  <div class="column skills">
-                    hello
-                  </div>
-                </div> -->
-
-              </div>
-            </div>
+          <div id="Home" class="tabcontent">
+            <h3>Home</h3>
+            <p>Home is where the heart is..</p>
+          </div>
+          
+          <div id="News" class="tabcontent">
+            <h3>News</h3>
+            <p>Some news this fine day!</p>
+          </div>
+          
+          <div id="Contact" class="tabcontent">
+            <h3>Contact</h3>
+            <p>Get in touch, or swing by for a cup of coffee.</p>
+          </div>
+          
+          <div id="About" class="tabcontent">
+            <h3>About</h3>
+            <p>Who we are and what we do.</p>
+          </div>
         </div>
       </div>
-      <div class="caraouselDiv">
-        <div class="tabs">
-          <button class="tablink" onclick="openPage('Home', this, 'red')">Home</button>
-          <button class="tablink" onclick="openPage('News', this, 'green')" id="defaultOpen">News</button>
-          <button class="tablink" onclick="openPage('Contact', this, 'blue')">Contact</button>
-          <button class="tablink" onclick="openPage('About', this, 'orange')">About</button>
-        </div>
-
-        <div id="Home" class="tabcontent">
-          <h3>Home</h3>
-          <p>Home is where the heart is..</p>
-        </div>
-        
-        <div id="News" class="tabcontent">
-          <h3>News</h3>
-          <p>Some news this fine day!</p>
-        </div>
-        
-        <div id="Contact" class="tabcontent">
-          <h3>Contact</h3>
-          <p>Get in touch, or swing by for a cup of coffee.</p>
-        </div>
-        
-        <div id="About" class="tabcontent">
-          <h3>About</h3>
-          <p>Who we are and what we do.</p>
-        </div>
-      </div>
-    </div>
-
 
 
     <script src="https://unpkg.com/ionicons@5.4.0/dist/ionicons.js"></script>

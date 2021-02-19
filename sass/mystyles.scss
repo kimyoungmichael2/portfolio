@@ -1,14 +1,31 @@
 @charset "utf-8";
 @import "../node_modules/bulma/bulma.sass";
 
-.mainBody {
-    // width: 90vw;
-    height: 90vh;
+html {
+    scroll-snap-type: y mandatory;
+}
+
+.sectionOne {
+    width: 90vw;
+    height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
+    scroll-snap-align: center;
 }
+
+.sectionTwo {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    scroll-snap-align: center;
+}
+
+// .profile {
+// }
 
 .profileImageAndLinks {
     justify-content: center;
@@ -115,3 +132,6 @@ body, html {
 #News {background-color: green;}
 #Contact {background-color: blue;}
 #About {background-color: orange;}
+
+
+  

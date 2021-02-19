@@ -7758,12 +7758,25 @@ a.has-text-danger-dark:hover, a.has-text-danger-dark:focus {
   background-color: #fafafa;
   padding: 3rem 1.5rem 6rem; }
 
-.mainBody {
-  height: 90vh;
+html {
+  scroll-snap-type: y mandatory; }
+
+.sectionOne {
+  width: 90vw;
+  height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
-  flex-direction: column; }
+  flex-direction: column;
+  scroll-snap-align: center; }
+
+.sectionTwo {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  scroll-snap-align: center; }
 
 .profileImageAndLinks {
   justify-content: center;
