@@ -85,17 +85,23 @@
         </div>
       </div>
       <div class="sectionTwo container">
-        <div class="caraouselDiv">
+        <div class="tabsDiv">
           <div class="tabs">
-            <button class="tablink" onclick="openPage('Home', this, 'red')">Home</button>
-            <button class="tablink" onclick="openPage('News', this, 'green')" id="defaultOpen">News</button>
+            <button class="tablink" onclick="openPage('Home', this, 'red')" id="defaultOpen">Home</button>
+            <button class="tablink" onclick="openPage('News', this, 'green')" >News</button>
             <button class="tablink" onclick="openPage('Contact', this, 'blue')">Contact</button>
             <button class="tablink" onclick="openPage('About', this, 'orange')">About</button>
           </div>
 
           <div id="Home" class="tabcontent">
-            <h3>Home</h3>
-            <p>Home is where the heart is..</p>
+            <div class="columns">
+              <div class="column is-half portfolioImage">
+                <img src="./public/sayniceResize.png">
+              </div>
+              <div class="column portfolioText">
+                  <h3>Second column</h3>
+              </div>
+            </div>
           </div>
           
           <div id="News" class="tabcontent">
@@ -134,7 +140,7 @@
         }
 
         // Show the specific tab content
-        document.getElementById(pageName).style.display = "block";
+        document.getElementById(pageName).style.display = "flex";
 
         // Add the specific color to the button used to open the tab content
         elmnt.style.backgroundColor = color;

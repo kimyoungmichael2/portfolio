@@ -7815,18 +7815,11 @@ html {
 ul {
   list-style-type: square; }
 
-.caraouselDiv {
+.tabsDiv {
   display: flex;
   align-items: center;
   flex-direction: column-reverse;
-  width: 100%;
-  height: 300px; }
-
-body, html {
-  height: 100%;
-  width: 100%;
-  margin: 0;
-  font-family: Arial; }
+  width: 100%; }
 
 .tabs {
   display: flex;
@@ -7849,19 +7842,33 @@ body, html {
 
 /* Style the tab content (and add height:100% for full page content) */
 .tabcontent {
-  color: white;
   display: flex;
+  justify-content: center;
+  align-items: stretch;
   width: 100%;
-  height: 300px; }
+  height: 500px; }
+
+.columns {
+  flex: 1; }
+
+.portfolioImage {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center; }
+
+.portfolioText {
+  display: flex;
+  align-items: center; }
 
 #Home {
-  background-color: red; }
+  background-color: white; }
 
 #News {
-  background-color: green; }
+  background-color: #d8ecf3; }
 
 #Contact {
-  background-color: blue; }
+  background-color: #d8ecf3; }
 
 #About {
-  background-color: orange; }
+  background-color: #d8ecf3; }
