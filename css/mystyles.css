@@ -7763,7 +7763,7 @@ html {
 
 .sectionOne {
   width: 90vw;
-  height: 100vh;
+  height: 90vh;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -7818,7 +7818,7 @@ ul {
 .tabsDiv {
   display: flex;
   align-items: center;
-  flex-direction: column-reverse;
+  flex-direction: row;
   width: 100%; }
 
 .tabs {
@@ -7827,15 +7827,13 @@ ul {
 
 /* Style tab links */
 .tablink {
+  height: 16px;
+  width: 16px;
+  border-radius: 50%;
+  display: inline-block;
   background-color: #555;
-  color: white;
-  float: left;
-  border: none;
-  outline: none;
-  cursor: pointer;
-  padding: 14px 16px;
-  font-size: 17px;
-  width: 25%; }
+  margin: 2px;
+  border-style: none; }
 
 .tablink:hover {
   background-color: #777; }
@@ -7859,16 +7857,13 @@ ul {
 
 .portfolioText {
   display: flex;
-  align-items: center; }
+  justify-content: center;
+  flex-direction: column;
+  max-width: 600px; }
 
-#Home {
-  background-color: white; }
+.techsUsed {
+  display: flex;
+  justify-content: center; }
 
-#News {
-  background-color: #d8ecf3; }
-
-#Contact {
-  background-color: #d8ecf3; }
-
-#About {
-  background-color: #d8ecf3; }
+.button {
+  margin: 3px; }
