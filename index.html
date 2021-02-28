@@ -86,52 +86,54 @@
       </div>
       <div class="sectionTwo container">
         <div class="tabsDiv">
-          <div>left arrow</div>
-          <div>            
-            <div id="Home" class="tabcontent">
-              <div class="columns">
-                <div class="column is-half portfolioImage">
-                  <img src="./public/sayniceResize.png">
-                </div>
-                <div class="column portfolioText">
-                    <h2 class="title">Encourage Michael App</h2>
-                    <p>This is a full stack web app on which personal friends were invited to leave encouraging comments for the creator.</p>
-                    <p>A react front-end is implemented which consumes REST API served by a Node.js back-end. The project is currently deployed on a headless linux server using Nginx and Express.js.</p>
-                    <br>
-                    <div class="techsUsed">
-                      <button class="button is-small is-rounded">React</button>
-                      <button class="button is-small is-rounded">Node.js</button>
-                      <button class="button is-small is-rounded">Express.js</button>
-                      <button class="button is-small is-rounded">MongoDB</button>
-                      <button class="button is-small is-rounded">Git</button>
-                    </div>
-                    <br>
-                    <div class="techsUsed">
-                      <a href="https://michaelyoung.kim" target="_blank">
-                        <button class="button is-medium is-rounded">                    
-                          <ion-icon class="icons" name="browsers-outline"></ion-icon>
-                          &nbsp; View the Project
-                        </button>
-                      </a>
-                    </div>
-                </div>
+          <div id="arrow_1" class="arrow-wrapper">
+            <div class="arrow arrow--left">
+              <span></span>
+            </div>         
+          </div>
+          <div id="Home" class="tabcontent">
+            <div class="columns">
+              <div class="column is-half portfolioImageDiv">
+                <img class="porfolioImage" src="./public/sayniceResize.png">
+              </div>
+              <div class="column portfolioText">
+                  <h2 class="title">Encourage Michael App</h2>
+                  <p>This is a full stack web app on which personal friends were invited to leave encouraging comments for the creator.</p>
+                  <p>A react front-end is implemented which consumes REST API served by a Node.js back-end. The project is currently deployed on a headless linux server using Nginx and Express.js.</p>
+                  <br>
+                  <div class="techsUsed">
+                    <button class="button is-small is-rounded">React</button>
+                    <button class="button is-small is-rounded">Node.js</button>
+                    <button class="button is-small is-rounded">Express.js</button>
+                    <button class="button is-small is-rounded">MongoDB</button>
+                    <button class="button is-small is-rounded">Git</button>
+                  </div>
+                  <br>
+                  <div class="techsUsed">
+                    <a href="https://michaelyoung.kim" target="_blank">
+                      <button class="button is-medium is-rounded">                    
+                        <ion-icon class="icons" name="browsers-outline"></ion-icon>
+                        &nbsp; View the Project
+                      </button>
+                    </a>
+                  </div>
               </div>
             </div>
+          </div>
 
-            <div id="News" class="tabcontent">
-              <h3>News</h3>
-              <p>Some news this fine day!</p>
-            </div>
-            
-            <div id="Contact" class="tabcontent">
-              <h3>Contact</h3>
-              <p>Get in touch, or swing by for a cup of coffee.</p>
-            </div>
-            
-            <div id="About" class="tabcontent">
-              <h3>About</h3>
-              <p>Who we are and what we do.</p>
-            </div>
+          <div id="News" class="tabcontent">
+            <h3>News</h3>
+            <p>Some news this fine day!</p>
+          </div>
+          
+          <div id="Contact" class="tabcontent">
+            <h3>Contact</h3>
+            <p>Get in touch, or swing by for a cup of coffee.</p>
+          </div>
+          
+          <div id="About" class="tabcontent">
+            <h3>About</h3>
+            <p>Who we are and what we do.</p>
           </div>
           <div id="arrow_1" class="arrow-wrapper">
             <div class="arrow arrow--right">
@@ -146,6 +148,7 @@
           <button class="tablink" onclick="openPage('About', this, '#777')"></button>
         </div>
       </div>
+      </div>
 
 
     <script src="https://unpkg.com/ionicons@5.4.0/dist/ionicons.js"></script>
@@ -154,6 +157,7 @@
         // Hide all elements with class="tabcontent" by default */
         var i, tabcontent, tablinks;
         tabcontent = document.getElementsByClassName("tabcontent");
+        console.log(tabcontent);
         for (i = 0; i < tabcontent.length; i++) {
           tabcontent[i].style.display = "none";
         }
@@ -169,6 +173,14 @@
 
         // Add the specific color to the button used to open the tab content
         elmnt.style.backgroundColor = color;
+      }
+
+
+
+      function rightArrow() {
+        currentTab = document.querySelector('.tabcontent[style*="display: flex"]')
+        console.log(currentTab);
+        document.getElementById(pageName).style.display = "flex";
       }
 
       // Get the element with id="defaultOpen" and click on it

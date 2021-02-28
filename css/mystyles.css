@@ -7838,7 +7838,6 @@ ul {
 .tablink:hover {
   background-color: #777; }
 
-/* Style the tab content (and add height:100% for full page content) */
 .tabcontent {
   display: flex;
   justify-content: center;
@@ -7849,11 +7848,14 @@ ul {
 .columns {
   flex: 1; }
 
-.portfolioImage {
+.portfolioImageDiv {
   display: flex;
   align-items: center;
-  flex-direction: column;
-  justify-content: center; }
+  flex-direction: row;
+  justify-content: flex-end; }
+
+.porfolioImage {
+  max-width: 600px; }
 
 .portfolioText {
   display: flex;
