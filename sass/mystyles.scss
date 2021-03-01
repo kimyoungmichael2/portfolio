@@ -80,7 +80,7 @@ ul {
 
 
 
-
+//tabs
 
 .tabsDiv {
     display: flex;
@@ -95,7 +95,6 @@ ul {
     flex-direction: row;
 }
 
-/* Style tab links */
 .tablink {
     height: 16px;
     width: 16px;
@@ -104,10 +103,11 @@ ul {
     background-color: #555;
     margin: 2px;
     border-style: none;
+    outline: none
 }
   
 .tablink:hover {
-    background-color: #777;
+    background-color: #888;
 }
   
 .tabcontent {

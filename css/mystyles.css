@@ -7825,7 +7825,6 @@ ul {
   display: flex;
   flex-direction: row; }
 
-/* Style tab links */
 .tablink {
   height: 16px;
   width: 16px;
@@ -7833,10 +7832,11 @@ ul {
   display: inline-block;
   background-color: #555;
   margin: 2px;
-  border-style: none; }
+  border-style: none;
+  outline: none; }
 
 .tablink:hover {
-  background-color: #777; }
+  background-color: #888; }
 
 .tabcontent {
   display: flex;

@@ -86,12 +86,12 @@
       </div>
       <div class="sectionTwo container">
         <div class="tabsDiv">
-          <div id="arrow_1" class="arrow-wrapper">
+          <div id="arrow_1" class="arrow-wrapper" onclick="leftArrow()">
             <div class="arrow arrow--left">
               <span></span>
             </div>         
           </div>
-          <div id="Home" class="tabcontent">
+          <div id="0" class="tabcontent">
             <div class="columns">
               <div class="column is-half portfolioImageDiv">
                 <img class="porfolioImage" src="./public/sayniceResize.png">
@@ -121,31 +121,31 @@
             </div>
           </div>
 
-          <div id="News" class="tabcontent">
+          <div id="1" class="tabcontent">
             <h3>News</h3>
             <p>Some news this fine day!</p>
           </div>
           
-          <div id="Contact" class="tabcontent">
+          <div id="2" class="tabcontent">
             <h3>Contact</h3>
             <p>Get in touch, or swing by for a cup of coffee.</p>
           </div>
           
-          <div id="About" class="tabcontent">
+          <div id="3" class="tabcontent">
             <h3>About</h3>
             <p>Who we are and what we do.</p>
           </div>
-          <div id="arrow_1" class="arrow-wrapper">
+          <div id="arrow_1" class="arrow-wrapper" onclick="rightArrow()">
             <div class="arrow arrow--right">
               <span></span>
             </div>
           </div>
         </div>
         <div class="tabs">
-          <button class="tablink is-light" onclick="openPage('Home', this, '#999')" id="defaultOpen"></button>
-          <button class="tablink" onclick="openPage('News', this, '#777')" ></button>
-          <button class="tablink" onclick="openPage('Contact', this, '#777')"></button>
-          <button class="tablink" onclick="openPage('About', this, '#777')"></button>
+          <button class="tablink" onclick="openPage('0', this, '#777')" id="b0"></button>
+          <button class="tablink" onclick="openPage('1', this, '#777')" id="b1"></button>
+          <button class="tablink" onclick="openPage('2', this, '#777')" id="b2"></button>
+          <button class="tablink" onclick="openPage('3', this, '#777')" id="b3"></button>
         </div>
       </div>
       </div>
@@ -153,6 +153,9 @@
 
     <script src="https://unpkg.com/ionicons@5.4.0/dist/ionicons.js"></script>
     <script>
+      buttonColor = "#555"
+      selectedButtonColor = "#888"
+      
       function openPage(pageName, elmnt, color) {
         // Hide all elements with class="tabcontent" by default */
         var i, tabcontent, tablinks;
@@ -175,16 +178,43 @@
         elmnt.style.backgroundColor = color;
       }
 
-
-
       function rightArrow() {
-        currentTab = document.querySelector('.tabcontent[style*="display: flex"]')
-        console.log(currentTab);
-        document.getElementById(pageName).style.display = "flex";
+        currentTab = document.querySelector('.tabcontent[style*="display: flex"]') //find the currently open tab
+        nextTabID = parseInt(currentTab.id) + 1; //add 1 to current tab ID to get the next one
+        currentButton = "b" + currentTab.id; //Button IDs are just "b" + tab ID
+        document.getElementById(currentTab.id).style.display = "none"; 
+        document.getElementById(currentButton).style.backgroundColor = buttonColor;
+        if (document.getElementById(nextTabID) == null) {
+          document.getElementById("0").style.display = "flex";
+          document.getElementById("b0").style.backgroundColor = selectedButtonColor;
+        }
+        else {
+          document.getElementById(nextTabID).style.display = "flex";
+          document.getElementById("b" + nextTabID).style.backgroundColor = selectedButtonColor;
+        }
+      }
+
+      function leftArrow() {
+        tabcontent = document.getElementsByClassName("tabcontent"); //get an array of all the tabcontents
+        finalTab = tabcontent.length - 1;
+        finalButton = "b" + finalTab;
+        currentTab = document.querySelector('.tabcontent[style*="display: flex"]') //find the currently open tab
+        currentButton = "b" + currentTab.id; //Button IDs are just "b" + tab ID
+        previousTabID = parseInt(currentTab.id) - 1;
+        document.getElementById(currentTab.id).style.display = "none";
+        document.getElementById(currentButton).style.backgroundColor = buttonColor;
+        if (document.getElementById(previousTabID) == null) {
+          document.getElementById(finalTab).style.display = "flex";
+          document.getElementById(finalButton).style.backgroundColor = selectedButtonColor;
+        }
+        else {
+          document.getElementById(previousTabID).style.display = "flex";
+          document.getElementById("b" + previousTabID).style.backgroundColor = selectedButtonColor;
+        }
       }
 
       // Get the element with id="defaultOpen" and click on it
-      document.getElementById("defaultOpen").click();
+      document.getElementById("b0").click();
     </script>
 
 
