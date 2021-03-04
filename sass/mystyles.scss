@@ -6,8 +6,8 @@ html {
 }
 
 .sectionOne {
-    width: 90vw;
-    height: 90vh;
+    width: 100vw;
+    height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -24,8 +24,7 @@ html {
     scroll-snap-align: center;
 }
 
-// .profile {
-// }
+//profile section
 
 .profileImageAndLinks {
     justify-content: center;
@@ -39,48 +38,69 @@ html {
     flex-direction: row-reverse;
 }
 
-.profileDescription {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    max-width: 570px;
+.profileDescriptionDiv {
+  display:flex;
+  .profileDescription {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      max-width: 450px;
+  }
 }
 
-.icons {
-    font-size: 24px;
-    display: flex;
-    justify-content: center;
-    color: #363636;
-}
-
-.icons:hover {
-    font-size: 24px;
-    display: flex;
-    justify-content: center;
-    color: grey;
-}
-
-.writings {
-    // text-align: center;
-}
-
-.skills {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
+.SNSLinksNav{
+  justify-content: center;
+  .SNSLinks {
+    // padding-left: 53px;
+    .icons {
+      display: flex;
+      color: #363636;
+      font-size:30px;
+      // padding-left:2px;
+      // padding-right:2px;
+    }
+    .icons:hover {
+      color: grey;
+  }  
+  }
 }
 
 ul {
-    list-style-type: square;
+    list-style-type:none;
+    text-align: center;
+  li {
+    line-height: 2em;
+  }
+}
+
+.skillset {
+  display:flex;
+  justify-content: center;
+  flex-direction: column;
+  flex-grow:3;
+  .skills {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    flex-direction: column;
+    width: 300px;
+    padding:2rem;
+    .icons {
+      font-size:32px;
+      color: #363636;
+    }
+  }
 }
 
 
 
+.columns:not(:last-child) {
+  padding-right: 8rem;
+}
 
 
 
-//tabs
+//portfolio section
 
 .tabsDiv {
     display: flex;
