@@ -65,26 +65,25 @@ html {
   }
 }
 
-ul {
-    list-style-type:none;
-    text-align: center;
-  li {
-    line-height: 2em;
-  }
-}
-
 .skillset {
   display:flex;
   justify-content: center;
   flex-direction: column;
   flex-grow:3;
+  ul {
+    list-style-type:none;
+    text-align: center;
+    li {
+      line-height: 2em;
+    }
+  }
   .skills {
     display: flex;
     align-items: center;
     justify-content: flex-start;
     flex-direction: column;
     width: 300px;
-    padding:2rem;
+    padding:3rem;
     .icons {
       font-size:32px;
       color: #363636;
@@ -158,12 +157,22 @@ ul {
     justify-content: center;
     flex-direction: column;
     max-width: 600px;
+    .techsUsed {
+      display:flex;
+      justify-content: center;
+      .button {
+        pointer-events: none;
+      }
+    }
+    .projectLink {
+      display:flex;
+      justify-content: center;
+      .button:hover {
+        // color: grey;
+      }
+    }
 }
 
-.techsUsed {
-    display:flex;
-    justify-content: center;
-}
 
 .button {
     margin: 3px;

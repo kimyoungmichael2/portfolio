@@ -7805,24 +7805,23 @@ html {
   .SNSLinksNav .SNSLinks .icons:hover {
     color: grey; }
 
-ul {
-  list-style-type: none;
-  text-align: center; }
-  ul li {
-    line-height: 2em; }
-
 .skillset {
   display: flex;
   justify-content: center;
   flex-direction: column;
   flex-grow: 3; }
+  .skillset ul {
+    list-style-type: none;
+    text-align: center; }
+    .skillset ul li {
+      line-height: 2em; }
   .skillset .skills {
     display: flex;
     align-items: center;
     justify-content: flex-start;
     flex-direction: column;
     width: 300px;
-    padding: 2rem; }
+    padding: 3rem; }
     .skillset .skills .icons {
       font-size: 32px;
       color: #363636; }
@@ -7877,10 +7876,14 @@ ul {
   justify-content: center;
   flex-direction: column;
   max-width: 600px; }
-
-.techsUsed {
-  display: flex;
-  justify-content: center; }
+  .portfolioText .techsUsed {
+    display: flex;
+    justify-content: center; }
+    .portfolioText .techsUsed .button {
+      pointer-events: none; }
+  .portfolioText .projectLink {
+    display: flex;
+    justify-content: center; }
 
 .button {
   margin: 3px; }
