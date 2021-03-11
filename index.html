@@ -195,9 +195,18 @@
       </div>
       </div>
 
+      <button class="scrollToBotBtn">                
+        <span></span>
+        <span></span>
+      </button>
+      <button class="scrollToTopBtn">
+        <span></span>
+        <span></span>
+      </button>
+
 
     <script src="https://unpkg.com/ionicons@5.4.0/dist/ionicons.js"></script>
-    <script>
+    <script> // tabs & tab navigation arrows JS
       buttonColor = "#555"
       selectedButtonColor = "#888"
       
@@ -261,7 +270,45 @@
       // Get the element with id="defaultOpen" and click on it
       document.getElementById("b0").click();
     </script>
+    <script>//scroll up and down button JS
+      var scrollToBotBtn = document.querySelector(".scrollToBotBtn")
+      var scrollToTopBtn = document.querySelector(".scrollToTopBtn")
+      var rootElement = document.documentElement
 
+      function handleScroll() {
+        // Do something on scroll
+        var scrollTotal = rootElement.scrollHeight - rootElement.clientHeight
+        if ((rootElement.scrollTop / scrollTotal ) > 0.50) {
+          // Show button
+          scrollToBotBtn.classList.remove("showBtn")
+          scrollToTopBtn.classList.add("showBtn")
+        } else {
+          // Hide button
+          scrollToTopBtn.classList.remove("showBtn")
+          scrollToBotBtn.classList.add("showBtn")
+        }
+      }
+
+      function scrollToBot() {
+        // Scroll to top logic
+        rootElement.scrollTo({
+          top: 10000,
+          behavior: "smooth"
+        })
+      }
+
+      function scrollToTop() {
+        // Scroll to top logic
+        rootElement.scrollTo({
+          top: 0,
+          behavior: "smooth"
+        })
+      }
+
+      scrollToBotBtn.addEventListener("click", scrollToBot)
+      scrollToTopBtn.addEventListener("click", scrollToTop)
+      document.addEventListener("scroll", handleScroll)
+    </script>
 
 
   </body>

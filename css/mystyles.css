@@ -7928,3 +7928,109 @@ html {
     transition: width 0.3s, right 0.3s 0.05s; }
   #arrow_1 .arrow.arrow--right:hover span, #arrow_1 .arrow.arrow--right:hover:before, #arrow_1 .arrow.arrow--right:hover:after {
     right: -21.21641px; }
+
+.scrollToBotBtn {
+  background-color: white;
+  border-style: solid;
+  border-radius: 50%;
+  color: white;
+  cursor: pointer;
+  font-size: 16px;
+  line-height: 48px;
+  height: 55px;
+  width: 55px;
+  outline: none;
+  /* place it at the bottom right corner */
+  position: fixed;
+  bottom: 50px;
+  right: 50px;
+  /* keep it at the top of everything else */
+  z-index: 100;
+  /* hide with opacity */
+  opacity: 0;
+  /* also add a translate effect */
+  transform: translateY(100px);
+  /* and a transition */ }
+  .scrollToBotBtn:hover {
+    background-color: rgba(223, 223, 223, 0.6); }
+  .scrollToBotBtn span {
+    display: block;
+    width: 18px;
+    height: 18px;
+    border-bottom: 2.5px solid #888;
+    border-right: 2.5px solid #888;
+    transform: rotate(45deg);
+    margin-top: -18px;
+    margin-right: auto;
+    margin-bottom: -18px;
+    margin-left: auto;
+    animation: animateToBottom 3s infinite; }
+    .scrollToBotBtn span:nth-child(2) {
+      animation-delay: -1.5s; }
+    .scrollToBotBtn span:nth-child(3) {
+      animation-delay: -1.6s; }
+
+@keyframes animateToBottom {
+  0% {
+    opacity: 0;
+    transform: rotate(45deg) translate(-5px, -5px); }
+  50% {
+    opacity: 1; }
+  100% {
+    opacity: 0;
+    transform: rotate(45deg) translate(10px, 10px); } }
+
+.scrollToTopBtn {
+  background-color: white;
+  border-style: solid;
+  border-radius: 50%;
+  color: white;
+  cursor: pointer;
+  font-size: 16px;
+  line-height: 48px;
+  height: 55px;
+  width: 55px;
+  outline: none;
+  /* place it at the bottom right corner */
+  position: fixed;
+  bottom: 50px;
+  right: 50px;
+  /* keep it at the top of everything else */
+  z-index: 100;
+  /* hide with opacity */
+  opacity: 0;
+  /* also add a translate effect */
+  transform: translateY(100px);
+  /* and a transition */ }
+  .scrollToTopBtn:hover {
+    background-color: rgba(223, 223, 223, 0.6); }
+  .scrollToTopBtn span {
+    display: block;
+    width: 18px;
+    height: 18px;
+    border-top: 2.5px solid #888;
+    border-left: 2.5px solid #888;
+    transform: rotate(45deg);
+    margin-top: -18px;
+    margin-right: auto;
+    margin-bottom: -18px;
+    margin-left: auto;
+    animation: animateToTop 3s infinite; }
+    .scrollToTopBtn span:nth-child(2) {
+      animation-delay: -1.5s; }
+    .scrollToTopBtn span:nth-child(3) {
+      animation-delay: -1.6s; }
+
+@keyframes animateToTop {
+  0% {
+    opacity: 0;
+    transform: rotate(45deg) translate(15px, 15px); }
+  50% {
+    opacity: 1; }
+  100% {
+    opacity: 0;
+    transform: rotate(45deg) translate(0px, 0px); } }
+
+.showBtn {
+  opacity: 1;
+  transform: translateY(0); }
