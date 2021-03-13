@@ -7765,6 +7765,12 @@ html, body {
   padding: 0px;
   overflow-x: hidden; }
 
+.columns {
+  flex: 1; }
+
+.button {
+  margin: 3px; }
+
 .sectionOne {
   display: flex;
   justify-content: center;
@@ -7789,52 +7795,52 @@ html, body {
       justify-content: center;
       align-items: center;
       max-width: 90vw; }
+  .sectionOne .skillset {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    flex-grow: 3; }
+    .sectionOne .skillset .SNSLinksNav {
+      flex-direction: row;
+      justify-content: center; }
+      .sectionOne .skillset .SNSLinksNav .SNSLinks {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center; }
+        .sectionOne .skillset .SNSLinksNav .SNSLinks .icons {
+          display: flex;
+          color: #363636;
+          font-size: 30px; }
+        .sectionOne .skillset .SNSLinksNav .SNSLinks .icons:hover {
+          color: grey; }
+    .sectionOne .skillset ul {
+      list-style-type: none;
+      text-align: center; }
+      .sectionOne .skillset ul li {
+        line-height: 2em; }
+    .sectionOne .skillset .skills {
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
+      flex-direction: column;
+      padding: 3rem; }
+      .sectionOne .skillset .skills .icons {
+        font-size: 32px;
+        color: #363636; }
+    .sectionOne .skillset .card {
+      border-style: solid;
+      border-width: thin;
+      border-color: lightgrey; }
 
 .columns:not(:last-child) {
   padding-right: 0rem; }
 
-.skillset {
+.sectionTwo {
   display: flex;
   justify-content: center;
-  flex-direction: column;
-  flex-grow: 3; }
-  .skillset .SNSLinksNav {
-    flex-direction: row;
-    justify-content: center; }
-    .skillset .SNSLinksNav .SNSLinks {
-      display: flex;
-      flex-direction: row;
-      justify-content: center;
-      align-items: center; }
-      .skillset .SNSLinksNav .SNSLinks .icons {
-        display: flex;
-        color: #363636;
-        font-size: 30px; }
-      .skillset .SNSLinksNav .SNSLinks .icons:hover {
-        color: grey; }
-  .skillset ul {
-    list-style-type: none;
-    text-align: center; }
-    .skillset ul li {
-      line-height: 2em; }
-  .skillset .skills {
-    display: flex;
-    align-items: center;
-    justify-content: flex-start;
-    flex-direction: column;
-    padding: 3rem; }
-    .skillset .skills .icons {
-      font-size: 32px;
-      color: #363636; }
-  .skillset .card {
-    border-style: solid;
-    border-width: thin;
-    border-color: lightgrey; }
-
-.sectionTwo {
-  display: block;
-  margin-left: auto;
-  margin-right: auto; }
+  align-items: center;
+  margin-top: 1rem; }
 
 @media (min-width: 1024px) {
   html {
@@ -7863,6 +7869,36 @@ html, body {
         justify-content: center;
         align-items: center;
         max-width: 450px; }
+    .sectionOne .skillset {
+      display: flex;
+      justify-content: center;
+      flex-direction: column;
+      flex-grow: 3; }
+      .sectionOne .skillset .SNSLinksNav {
+        justify-content: center; }
+        .sectionOne .skillset .SNSLinksNav .SNSLinks .icons {
+          display: flex;
+          color: #363636;
+          font-size: 30px; }
+        .sectionOne .skillset .SNSLinksNav .SNSLinks .icons:hover {
+          color: grey; }
+      .sectionOne .skillset ul {
+        list-style-type: none;
+        text-align: center; }
+        .sectionOne .skillset ul li {
+          line-height: 2em; }
+      .sectionOne .skillset .skills {
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        flex-direction: column;
+        width: 300px;
+        padding: 3rem; }
+        .sectionOne .skillset .skills .icons {
+          font-size: 32px;
+          color: #363636; }
+    .sectionOne .columns:not(:last-child) {
+      padding-right: 8rem; }
   .sectionTwo {
     height: 100vh;
     display: flex;
@@ -7870,95 +7906,51 @@ html, body {
     align-items: center;
     flex-direction: column;
     scroll-snap-align: center; }
-  .skillset {
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    flex-grow: 3; }
-    .skillset .SNSLinksNav {
-      justify-content: center; }
-      .skillset .SNSLinksNav .SNSLinks .icons {
-        display: flex;
-        color: #363636;
-        font-size: 30px; }
-      .skillset .SNSLinksNav .SNSLinks .icons:hover {
-        color: grey; }
-    .skillset ul {
-      list-style-type: none;
-      text-align: center; }
-      .skillset ul li {
-        line-height: 2em; }
-    .skillset .skills {
+    .sectionTwo .tabsDiv {
       display: flex;
       align-items: center;
-      justify-content: flex-start;
-      flex-direction: column;
-      width: 300px;
-      padding: 3rem; }
-      .skillset .skills .icons {
-        font-size: 32px;
-        color: #363636; }
-  .columns:not(:last-child) {
-    padding-right: 8rem; } }
-
-.tabsDiv {
-  display: flex;
-  align-items: center;
-  flex-direction: row;
-  width: 100%; }
-
-.tabs {
-  display: flex;
-  flex-direction: row; }
-
-.tablink {
-  height: 16px;
-  width: 16px;
-  border-radius: 50%;
-  display: inline-block;
-  background-color: #555;
-  margin: 2px;
-  border-style: none;
-  outline: none; }
-
-.tablink:hover {
-  background-color: #888; }
-
-.tabcontent {
-  display: flex;
-  justify-content: center;
-  align-items: stretch;
-  width: 100%;
-  height: 500px; }
-
-.columns {
-  flex: 1; }
-
-.portfolioImageDiv {
-  display: flex;
-  align-items: center;
-  flex-direction: row;
-  justify-content: flex-end; }
-
-.porfolioImage {
-  max-width: 600px; }
-
-.portfolioText {
-  display: flex;
-  justify-content: center;
-  flex-direction: column;
-  max-width: 600px; }
-  .portfolioText .techsUsed {
-    display: flex;
-    justify-content: center; }
-    .portfolioText .techsUsed .button {
-      pointer-events: none; }
-  .portfolioText .projectLink {
-    display: flex;
-    justify-content: center; }
-
-.button {
-  margin: 3px; }
+      flex-direction: row;
+      width: 100%; }
+      .sectionTwo .tabsDiv .tabcontent {
+        display: flex;
+        justify-content: center;
+        align-items: stretch;
+        width: 100%;
+        height: 500px; }
+        .sectionTwo .tabsDiv .tabcontent .portfolioImageDiv {
+          display: flex;
+          align-items: center;
+          flex-direction: row;
+          justify-content: flex-end; }
+          .sectionTwo .tabsDiv .tabcontent .portfolioImageDiv .porfolioImage {
+            max-width: 600px; }
+        .sectionTwo .tabsDiv .tabcontent .portfolioText {
+          display: flex;
+          justify-content: center;
+          flex-direction: column;
+          max-width: 600px; }
+          .sectionTwo .tabsDiv .tabcontent .portfolioText .techsUsed {
+            display: flex;
+            justify-content: center; }
+            .sectionTwo .tabsDiv .tabcontent .portfolioText .techsUsed .button {
+              pointer-events: none; }
+          .sectionTwo .tabsDiv .tabcontent .portfolioText .projectLink {
+            display: flex;
+            justify-content: center; }
+    .sectionTwo .tabs {
+      display: flex;
+      flex-direction: row; }
+      .sectionTwo .tabs .tablink {
+        height: 16px;
+        width: 16px;
+        border-radius: 50%;
+        display: inline-block;
+        background-color: #555;
+        margin: 2px;
+        border-style: none;
+        outline: none; }
+        .sectionTwo .tabs .tablink:hover {
+          background-color: #888; } }
 
 #arrow_1 .arrow {
   cursor: pointer;
