@@ -1,75 +1,77 @@
 @charset "utf-8";
 @import "../node_modules/bulma/bulma.sass";
 
-html {
-    scroll-snap-type: y mandatory;
+html,body
+{
+    width: 100%;
+    height: 100%;
+    margin: 0px;
+    padding: 0px;
+    overflow-x: hidden; 
 }
 
+//mobile (up to 768px)
 .sectionOne {
-    width: 100vw;
-    height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 1rem;
+  .profileColumns {
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    scroll-snap-align: center;
-}
-
-.sectionTwo {
-    height: 100vh;
+  }
+  .profileImage {
     display: flex;
     justify-content: center;
     align-items: center;
-    flex-direction: column;
-    scroll-snap-align: center;
-}
-
-//profile section
-
-.profileImageAndLinks {
+  }
+  .profileDescriptionDiv {
+    display: flex;
     justify-content: center;
     align-items: center;
-    flex-direction: column;
-}
-
-.profileImage {
-    display: flex;
-    align-items: center;
-    flex-direction: row-reverse;
-}
-
-.profileDescriptionDiv {
-  display:flex;
-  .profileDescription {
+    text-align: center;
+    .profileDescription {
       display: flex;
       justify-content: center;
       align-items: center;
-      max-width: 450px;
+        max-width: 90vw;
+    }
   }
 }
 
-.SNSLinksNav{
-  justify-content: center;
-  .SNSLinks {
-    // padding-left: 53px;
-    .icons {
-      display: flex;
-      color: #363636;
-      font-size:30px;
-      // padding-left:2px;
-      // padding-right:2px;
-    }
-    .icons:hover {
-      color: grey;
-  }  
-  }
+.columns:not(:last-child) {
+  padding-right: 0rem;
 }
+
+
 
 .skillset {
   display:flex;
   justify-content: center;
   flex-direction: column;
   flex-grow:3;
+  .SNSLinksNav{
+    flex-direction:row;
+    justify-content: center;
+    .SNSLinks {
+      display:flex;
+      flex-direction:row;
+      justify-content: center;
+      align-items: center;
+      .icons {
+        display: flex;
+        color: #363636;
+        font-size:30px;
+        // padding-left:2px;
+        // padding-right:2px;
+      }
+      .icons:hover {
+        color: grey;
+      }  
+    }
+  }
   ul {
     list-style-type:none;
     text-align: center;
@@ -82,20 +84,135 @@ html {
     align-items: center;
     justify-content: flex-start;
     flex-direction: column;
-    width: 300px;
     padding:3rem;
     .icons {
       font-size:32px;
       color: #363636;
     }
   }
+  .card {
+    border-style: solid;
+    border-width: thin;
+    border-color: lightgrey;
+  }
 }
 
 
 
-.columns:not(:last-child) {
-  padding-right: 8rem;
+.sectionTwo {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
 }
+
+
+
+
+@media (min-width: 1024px) { //all laptop (1024px+) and larger devices (up to 6144px, which is just something I made up. What's the right way to do this?)
+  html {
+    scroll-snap-type: y mandatory;
+  }
+  .sectionOne {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    scroll-snap-align: center;
+    .profileColumns {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: row;
+    }
+    .profileImage {
+      display: flex;
+      align-items: center;
+      justify-content: flex-end;
+    }
+    .profileDescriptionDiv {
+      display:flex;
+      .profileDescription {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          max-width: 450px;
+      }
+    }
+  }
+
+  .sectionTwo {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    scroll-snap-align: center;
+  }
+
+  //profile section
+
+
+
+
+
+
+
+  .skillset {
+    display:flex;
+    justify-content: center;
+    flex-direction: column;
+    flex-grow:3;
+    .SNSLinksNav{
+      justify-content: center;
+      .SNSLinks {
+        // padding-left: 53px;
+        .icons {
+          display: flex;
+          color: #363636;
+          font-size:30px;
+          // padding-left:2px;
+          // padding-right:2px;
+        }
+        .icons:hover {
+          color: grey;
+      }  
+      }
+    }
+    ul {
+      list-style-type:none;
+      text-align: center;
+      li {
+        line-height: 2em;
+      }
+    }
+    .skills {
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
+      flex-direction: column;
+      width: 300px;
+      padding:3rem;
+      .icons {
+        font-size:32px;
+        color: #363636;
+      }
+    }
+  }
+
+
+
+  .columns:not(:last-child) {
+    padding-right: 8rem;
+  }
+}
+//end of laptop+ media query
+
+
+
+
+
 
 
 
