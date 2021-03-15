@@ -23,7 +23,6 @@
                       <h2 class="subtitle is-5 writings">Front End Developer</h2>
                       <p class="writings">Michael makes fast, responsive, and dynamic web interfaces. He currently lives in DC Metro area and is #readytowork! <br>Check out some of his skills and projects here.</p>
                     </div>
-
                   </div>
                 </div>
             </div>
@@ -45,20 +44,21 @@
               </div>
             </nav>
             <br>
-            <div class="card">
-                <div class="skills">
-                  <a class>
-                    <ion-icon size="" class="icons" name="browsers-outline"></ion-icon>
-                  </a>
-                  <b class="subtitle">Front End</b>
-                  <ul>
-                    <li>React</li>
-                    <li>Javascript</li>
-                    <li>CSS and SASS</li>
-                  </ul>
-                </div>
-            </div>
-            <div class="card">
+            <div class="cards">
+              <div class="card">
+                  <div class="skills">
+                    <a class>
+                      <ion-icon size="" class="icons" name="browsers-outline"></ion-icon>
+                    </a>
+                    <b class="subtitle">Front End</b>
+                    <ul>
+                      <li>React</li>
+                      <li>Javascript</li>
+                      <li>CSS and SASS</li>
+                    </ul>
+                  </div>
+              </div>
+              <div class="card">
                 <div class="skills">
                   <a class>
                     <ion-icon size="large" class="icons" name="server-outline"></ion-icon>
@@ -70,21 +70,22 @@
                     <li>MongoDB</li>
                   </ul>
                 </div>
+              </div>
+              <div class="card">
+                    <div class="skills">
+                      <a class>
+                        <ion-icon size="large" class="icons" name="settings-outline"></ion-icon>
+                      </a>
+                      <b class="subtitle">Dev Ops</b>
+                      <ul>
+                        <li>Linux</li>
+                        <li>NGINX</li>
+                        <li>Git / Github</li>
+                        <li>Docker</li>
+                      </ul>
+                    </div>
+              </div>
             </div>
-            <div class="card">
-                <div class="skills">
-                  <a class>
-                    <ion-icon size="large" class="icons" name="settings-outline"></ion-icon>
-                  </a>
-                  <b class="subtitle">Dev Ops</b>
-                  <ul>
-                    <li>Linux</li>
-                    <li>NGINX</li>
-                    <li>Git / Github</li>
-                    <li>Docker</li>
-                  </ul>
-                </div>
-           </div>
           </div>
         </div>
       </div>
@@ -95,7 +96,7 @@
               <span></span>
             </div>         
           </div>
-          <div id="0" class="tabcontent">
+          <div id="0" class="tabcontent even">
             <div class="columns">
               <div class="column is-half portfolioImageDiv">
                 <img class="porfolioImage" src="./public/sayniceResize.png">
@@ -125,7 +126,7 @@
             </div>
           </div>
 
-          <div id="1" class="tabcontent">
+          <div id="1" class="tabcontent odd">
             <div class="columns">
               <div class="column is-half portfolioImageDiv">
                 <img class="porfolioImage" src="./public/ROI.png">
@@ -153,7 +154,7 @@
             </div>
           </div>
           
-          <div id="2" class="tabcontent">
+          <div id="2" class="tabcontent even">
             <div class="columns">
               <div class="column is-half portfolioImageDiv">
                 <img class="porfolioImage" src="./public/brdway.png">
@@ -204,49 +205,60 @@
         <span></span>
       </button>
 
-
+      <footer>
+        <p>michaelyoung.kim © 2021</p>
+        <!-- <a href="https://bulma.io">
+          <img
+            src="https://bulma.io/images/made-with-bulma--black.png"
+            alt="Made with Bulma"
+            width="128"
+            height="24">
+        </a> -->
+      </footer>
     <script src="https://unpkg.com/ionicons@5.4.0/dist/ionicons.js"></script>
     <script> // tabs & tab navigation arrows JS
       buttonColor = "#555"
       selectedButtonColor = "#888"
       
-      function openPage(pageName, elmnt, color) {
-        // Hide all elements with class="tabcontent" by default */
-        var i, tabcontent, tablinks;
-        tabcontent = document.getElementsByClassName("tabcontent");
-        console.log(tabcontent);
-        for (i = 0; i < tabcontent.length; i++) {
-          tabcontent[i].style.display = "none";
+      if (screen.width > 769){
+        function openPage(pageName, elmnt, color) {
+          // Hide all elements with class="tabcontent" by default */
+          var i, tabcontent, tablinks;
+          tabcontent = document.getElementsByClassName("tabcontent");
+          console.log(tabcontent);
+          for (i = 0; i < tabcontent.length; i++) {
+            tabcontent[i].style.display = "none";
+          }
+
+          // Remove the background color of all tablinks/buttons
+          tablinks = document.getElementsByClassName("tablink");
+          for (i = 0; i < tablinks.length; i++) {
+            tablinks[i].style.backgroundColor = "";
+          }
+
+          // Show the specific tab content
+          document.getElementById(pageName).style.display = "flex";
+
+          // Add the specific color to the button used to open the tab content
+          elmnt.style.backgroundColor = color;
         }
 
-        // Remove the background color of all tablinks/buttons
-        tablinks = document.getElementsByClassName("tablink");
-        for (i = 0; i < tablinks.length; i++) {
-          tablinks[i].style.backgroundColor = "";
+        function rightArrow() {
+          currentTab = document.querySelector('.tabcontent[style*="display: flex"]') //find the currently open tab
+          nextTabID = parseInt(currentTab.id) + 1; //add 1 to current tab ID to get the next one
+          currentButton = "b" + currentTab.id; //Button IDs are just "b" + tab ID
+          document.getElementById(currentTab.id).style.display = "none"; 
+          document.getElementById(currentButton).style.backgroundColor = buttonColor;
+          if (document.getElementById(nextTabID) == null) {
+            document.getElementById("0").style.display = "flex";
+            document.getElementById("b0").style.backgroundColor = selectedButtonColor;
+          }
+          else {
+            document.getElementById(nextTabID).style.display = "flex";
+            document.getElementById("b" + nextTabID).style.backgroundColor = selectedButtonColor;
+          }
         }
-
-        // Show the specific tab content
-        document.getElementById(pageName).style.display = "flex";
-
-        // Add the specific color to the button used to open the tab content
-        elmnt.style.backgroundColor = color;
-      }
-
-      function rightArrow() {
-        currentTab = document.querySelector('.tabcontent[style*="display: flex"]') //find the currently open tab
-        nextTabID = parseInt(currentTab.id) + 1; //add 1 to current tab ID to get the next one
-        currentButton = "b" + currentTab.id; //Button IDs are just "b" + tab ID
-        document.getElementById(currentTab.id).style.display = "none"; 
-        document.getElementById(currentButton).style.backgroundColor = buttonColor;
-        if (document.getElementById(nextTabID) == null) {
-          document.getElementById("0").style.display = "flex";
-          document.getElementById("b0").style.backgroundColor = selectedButtonColor;
-        }
-        else {
-          document.getElementById(nextTabID).style.display = "flex";
-          document.getElementById("b" + nextTabID).style.backgroundColor = selectedButtonColor;
-        }
-      }
+     }
 
       function leftArrow() {
         tabcontent = document.getElementsByClassName("tabcontent"); //get an array of all the tabcontents

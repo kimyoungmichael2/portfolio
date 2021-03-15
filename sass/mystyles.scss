@@ -1,15 +1,13 @@
 @charset "utf-8";
 @import "../node_modules/bulma/bulma.sass";
 
-html,body
-{
-    width: 100%;
-    height: 100%;
-    margin: 0px;
-    padding: 0px;
-    overflow-x: hidden; 
-}
 
+footer {
+  display:block;
+  text-align:center;
+  padding-top:1.3rem;
+  padding-bottom:1.3rem;
+}
 
 .columns {
   flex: 1;
@@ -111,18 +109,63 @@ html,body
 
 
 .sectionTwo {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin-top: 1rem;
+  // display: flex;
+  // justify-content: center;
+  // align-items: center;
+  margin-top: 6rem;
+  .tabsDiv {
+    .tabcontent {
+      padding-top:4rem;
+      padding-bottom:4rem;
+      .portfolioText {
+        text-align: center;
+        margin: 5px;
+        .techsUsed {
+          display:flex;
+          flex-wrap:wrap;
+          justify-content: center;
+          .button {
+            pointer-events: none;
+          }
+        }
+        .projectLink {
+          display:flex;
+          justify-content: center;
+        }
+      }
+      .portfolioImageDiv{
+        margin-left:10px;
+        margin-right:-250px;
+      }
+    }
+    .title{
+      font-size: 1.3rem;
+    }
+    .even {
+      background-color: #3a3b58;
+      color:white;
+      .title{
+        color:white;
+      }
+      .button{
+        // filter:invert(90%);
+      }
+    }
+  }
+  .tabs {
+    display:none;
+  }
 }
 
+//end of mobile section
 
 
-
-@media (min-width: 1024px) { //all laptop (1024px+) and larger devices (up to 6144px, which is just something I made up. What's the right way to do this?)
+@media (min-width: 1024px) { //all laptop (1024px+) and larger devices
   html {
     scroll-snap-type: y mandatory;
+  }
+  footer {
+    display:none;
   }
   .sectionOne {
     width: 100vw;
@@ -157,6 +200,12 @@ html,body
       justify-content: center;
       flex-direction: column;
       flex-grow:3;
+      .cards{
+        display:flex;
+        .card {
+          display:flex;
+        }
+      }
       .SNSLinksNav{
         justify-content: center;
         .SNSLinks {
@@ -217,13 +266,20 @@ html,body
           align-items: stretch;
           width: 100%;
           height: 500px;
+          background-color: white;
+          color:black;
+          .title{
+            color:black;
+          }
           .portfolioImageDiv {
             display:flex;
             align-items: center;
             flex-direction: row;
             justify-content: flex-end;
+            margin-left:15px;
+            margin-right:0px;
             .porfolioImage {
-              max-width: 600px;
+              // max-width: 600px;
             }
           }
           .portfolioText {
@@ -266,16 +322,12 @@ html,body
         }
       }  
   }
-}
 
-//end of laptop+ media query
-
-//arrows
-
-#arrow_1 .arrow {
+  //arrows
+  #arrow_1 .arrow {
     $size: 30px;
     $width: 2px;
-  
+
     cursor: pointer;
     display: block;
     width: $size / 1.414;
@@ -316,16 +368,16 @@ html,body
           #{$direction}: 0;
           transform-origin: #{$direction} 50%;
         }
-  
+
         &:before,
         &:after {
           transition: #{$direction} 0.3s 0.05s;
         }
-  
+
         & span {
           transition: width 0.3s, #{$direction} 0.3s 0.05s;
         }
-  
+
         &:hover {
           & span,
           &:before,
@@ -336,7 +388,12 @@ html,body
       }
     }
   }
-  
+
+}
+
+//end of laptop+ media query
+
+
 
 //scroll up and down button
 
