@@ -1,6 +1,9 @@
 @charset "utf-8";
 @import "../node_modules/bulma/bulma.sass";
 
+html, body {
+  overflow-x: hidden;
+}
 
 footer {
   display:block;
@@ -157,12 +160,21 @@ footer {
   }
 }
 
+.scrollToBotBtn{
+  display:none;
+}
+.scrollToTopBtn{
+  display:none;
+}
+
+
 //end of mobile section
 
 
 @media (min-width: 1024px) { //all laptop (1024px+) and larger devices
-  html {
+  html, body {
     scroll-snap-type: y mandatory;
+    overflow-x: visible;
   }
   footer {
     display:none;
@@ -389,15 +401,11 @@ footer {
     }
   }
 
-}
 
-//end of laptop+ media query
-
-
-
-//scroll up and down button
+  //scroll up and down button
 
 .scrollToBotBtn {
+  display:block;
   background-color: white;
   // border:none;
   border-style: solid;
@@ -464,6 +472,7 @@ footer {
 
 
 .scrollToTopBtn {
+  display:block;
   background-color: white;
   border-style: solid;
   border-radius: 50%;
@@ -527,7 +536,73 @@ footer {
 }
 
     
-.showBtn {
+.showBtn { //this turns on and off the scroll to top button and scroll to bottom button according to JS
   opacity: 1;
   transform: translateY(0)
+}
+
+}
+
+//end of laptop+ media query
+
+
+
+
+
+
+//CSS-Slides
+
+.slider {
+  width: 300px;
+  text-align: center;
+  overflow: hidden;
+}
+
+.slides {
+  display: flex;
+  
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  
+  
+  
+  scroll-behavior: smooth;
+  -webkit-overflow-scrolling: touch;
+  
+  /*
+  scroll-snap-points-x: repeat(300px);
+  scroll-snap-type: mandatory;
+  */
+}
+.slides::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+.slides::-webkit-scrollbar-thumb {
+  background: black;
+  border-radius: 10px;
+}
+.slides::-webkit-scrollbar-track {
+  background: transparent;
+}
+.slides > div {
+  scroll-snap-align: start;
+  flex-shrink: 0;
+  width: 300px;
+  height: 300px;
+  margin-right: 50px;
+  border-radius: 10px;
+  background: #eee;
+  transform-origin: center center;
+  transform: scale(1);
+  transition: transform 0.5s;
+  position: relative;
+  
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 100px;
+}
+.slides > div:target {
+/*   transform: scale(0.8); */
 }
