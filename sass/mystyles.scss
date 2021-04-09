@@ -120,6 +120,12 @@ footer {
     .tabcontent {
       padding-top:4rem;
       padding-bottom:4rem;
+        .portfolioColumnsDiv {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          flex-direction: column;
+        }
       .portfolioText {
         text-align: center;
         margin: 5px;
@@ -282,6 +288,9 @@ footer {
           color:black;
           .title{
             color:black;
+          }
+          .portfolioColumnsDiv {
+            flex-direction: row;
           }
           .portfolioImageDiv {
             display:flex;

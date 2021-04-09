@@ -7843,6 +7843,11 @@ footer {
   .sectionTwo .tabsDiv .tabcontent {
     padding-top: 4rem;
     padding-bottom: 4rem; }
+    .sectionTwo .tabsDiv .tabcontent .portfolioColumnsDiv {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column; }
     .sectionTwo .tabsDiv .tabcontent .portfolioText {
       text-align: center;
       margin: 5px; }
@@ -7960,6 +7965,8 @@ footer {
         color: black; }
         .sectionTwo .tabsDiv .tabcontent .title {
           color: black; }
+        .sectionTwo .tabsDiv .tabcontent .portfolioColumnsDiv {
+          flex-direction: row; }
         .sectionTwo .tabsDiv .tabcontent .portfolioImageDiv {
           display: flex;
           align-items: center;
