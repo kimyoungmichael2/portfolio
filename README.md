@@ -11,5 +11,10 @@ Add additional "tabcontent" div and keep the ID sequencial.
 Add additional "tablink" button and keep the argument for onclick and ID sequencial. 
 No need to touch the JS.
 
+# Content Image Generation
+Use https://browserframe.com/
+Set browser frame to Generic Dark.
+Set the SCREEN HEIGHT to 765 and download. 
+
 # Deployment
 To re-deploy after making any changes, see instructions on deploy.sh.

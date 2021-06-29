@@ -68,6 +68,7 @@
                     <li>Node</li>
                     <li>Express.js</li>
                     <li>MongoDB</li>
+                    <li>SQLite</li>
                   </ul>
                 </div>
               </div>
@@ -99,23 +100,30 @@
           <div id="0" class="tabcontent even">
             <div class="columns portfolioColumnsDiv">
               <div class="column portfolioImageDiv">
-                <img class="porfolioImage" src="./public/sayniceResize.png">
+                <img class="porfolioImage" src="./public/LPDB.png">
               </div>
               <div class="column portfolioText">
-                  <h2 class="title">Encourage Michael App</h2>
-                  <p>This is a full stack web app on which personal friends were invited to leave encouraging comments for the creator.</p>
-                  <p>A react front-end is implemented which consumes REST API served by a Node.js back-end. The project is currently deployed on a headless linux server using Nginx and Express.js.</p>
+                  <h2 class="title">License Plate Database</h2>
+                  <p>The License Plate Database ("LPDB") is a full stack web application that can recognize license plates from a live video stream and store them in a database. Commissioned by a local car wash business, LPDB tracks their customers' visits, giving the business capacity to enact customer loyalty programs (i.e. every 10th car wash free) as well as gain business analytics. </p>
+                  <br>
+                  <p>I have worked in collaboration with another engineer in this project using git / github. Docker was utilized for maintaining consistent development environment. I contributed to the front-end by designing a responsive UI using React. In the back-end, I utilized Express.js to define routes that run CRUD services to a SQLite database. </p>
+                  <br>
+                  <p>License recognition is implemented using the deep learning based automatic license recognition engine <a href="https://github.com/DoubangoTelecom/ultimateALPR-SDK" target="blank">Ultimate ALPR</a>. </p>
+                  <br>
+
+                  <p>A demo version is linked below for browsing. The license recognition feature is not available in the demo version, which controls the inserting of new data. But the rest of the CRUD functions are available for testing. Future updates may include a way to insert video files with license plates to allow end-to-end testing.</p>
                   <br>
                   <div class="techsUsed">
                     <button class="button is-small is-rounded">React</button>
                     <button class="button is-small is-rounded">Node.js</button>
                     <button class="button is-small is-rounded">Express.js</button>
-                    <button class="button is-small is-rounded">MongoDB</button>
+                    <button class="button is-small is-rounded">SQLite</button>
+                    <button class="button is-small is-rounded">Docker</button>
                     <button class="button is-small is-rounded">Git</button>
                   </div>
                   <br>
                   <div class="projectLink">
-                    <a href="https://michaelyoung.kim/encourage/" target="_blank">
+                    <a href="https://michaelyoung.kim/lpdb/" target="_blank">
                       <button class="button is-medium is-rounded">                    
                         <ion-icon class="icons" name="browsers-outline"></ion-icon>
                         &nbsp; View the Project
@@ -125,6 +133,7 @@
               </div>
             </div>
           </div>
+
 
           <div id="1" class="tabcontent odd">
             <div class="columns portfolioColumnsDiv">
@@ -181,6 +190,37 @@
               </div>
             </div>
           </div>
+
+
+          <div id="3" class="tabcontent even">
+            <div class="columns portfolioColumnsDiv">
+              <div class="column portfolioImageDiv">
+                <img class="porfolioImage" src="./public/sayniceResize.png">
+              </div>
+              <div class="column portfolioText">
+                  <h2 class="title">Encourage Michael App</h2>
+                  <p>This is a full stack web app on which personal friends were invited to leave encouraging comments for the creator.</p>
+                  <p>A react front-end is implemented which consumes REST API served by a Node.js back-end. The project is currently deployed on a headless linux server using Nginx and Express.js.</p>
+                  <br>
+                  <div class="techsUsed">
+                    <button class="button is-small is-rounded">React</button>
+                    <button class="button is-small is-rounded">Node.js</button>
+                    <button class="button is-small is-rounded">Express.js</button>
+                    <button class="button is-small is-rounded">MongoDB</button>
+                    <button class="button is-small is-rounded">Git</button>
+                  </div>
+                  <br>
+                  <div class="projectLink">
+                    <a href="https://michaelyoung.kim/encourage/" target="_blank">
+                      <button class="button is-medium is-rounded">                    
+                        <ion-icon class="icons" name="browsers-outline"></ion-icon>
+                        &nbsp; View the Project
+                      </button>
+                    </a>
+                  </div>
+              </div>
+            </div>
+          </div>
           
           <div id="arrow_1" class="arrow-wrapper" onclick="rightArrow()">
             <div class="arrow arrow--right">
@@ -192,6 +232,7 @@
           <button class="tablink" onclick="openPage('0', this, '#777')" id="b0"></button>
           <button class="tablink" onclick="openPage('1', this, '#777')" id="b1"></button>
           <button class="tablink" onclick="openPage('2', this, '#777')" id="b2"></button>
+          <button class="tablink" onclick="openPage('3', this, '#777')" id="b3"></button>
         </div>
       </div>
       </div>
