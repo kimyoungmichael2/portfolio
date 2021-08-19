@@ -233,7 +233,7 @@
           <button class="tablink" onclick="openPage('0', this, '#777')" id="b0"></button>
           <button class="tablink" onclick="openPage('1', this, '#777')" id="b1"></button>
           <button class="tablink" onclick="openPage('2', this, '#777')" id="b2"></button>
-          <button class="tablink" onclick="openPage('3', this, '#777')" id="b3"></button>
+          <!-- <button class="tablink" onclick="openPage('3', this, '#777')" id="b3"></button> -->
         </div>
       </div>
       </div>
@@ -262,7 +262,8 @@
       buttonColor = "#555"
       selectedButtonColor = "#888"
       
-      if (screen.width > 1024){
+      if (window.innerWidth > 1024){
+        console.log("window width is greater than 1024, and is:" + window.innerWidth)
         function openPage(pageName, elmnt, color) {
           // Hide all elements with class="tabcontent" by default */
           var i, tabcontent, tablinks;
